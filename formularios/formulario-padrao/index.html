@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fieldset {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- so de adicionar essa class ele ja fica automatico -->
+    <form class="pure-form">
+        <p>Selecione</p>
+        <fieldset>
+            <fieldset class="fieldset">
+                <select title="selecione" id="stacked-state">
+                    <option>Conter</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                </select>
+                <input type="email" placeholder="Digite aqui para ..." />
+            </fieldset>
+            <fieldset class="fieldset">
+                <span>Filtro:</span>
+                <label for="default-remember">
+                    <input type="checkbox" id="default-remember" /> Bater Papo
+                </label>
+                <label for="default-remember">
+                    <input type="checkbox" id="default-remember" /> Grupo
+                </label>
+                <label for="default-remember">
+                    <input type="checkbox" id="default-remember" /> Transmissão
+                </label>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

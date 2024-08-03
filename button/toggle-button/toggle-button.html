@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Alternância</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-checkbox {
+            display: none;
+        }
+
+        .toggle-label {
+            padding: .7rem;
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 24px;
+            background-color: #ccc;
+            border-radius: 24px;
+            cursor: pointer;
+        }
+
+        .toggle-label .toggle-inner {
+            
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            right: 4px;
+            bottom: 4px;
+            background-color: #007BFF;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .toggle-label .toggle-switch {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .toggle-checkbox:checked + .toggle-label .toggle-inner {
+            background-color: #007BFF;
+        }
+
+        .toggle-checkbox:checked + .toggle-label .toggle-switch {
+            transform: translateX(36px);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="toggle-switch">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label">
+            <span class="toggle-inner">mostrar</span>
+            <span class="toggle-switch"></span>
+        </label>
+        <span class="toggle-text">mostrar</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

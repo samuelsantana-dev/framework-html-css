@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .toggle-container-dynamic-button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #008080;
+            border-radius: 20px;
+            padding: 5px 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-switch-dynamic-button {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .toggle-container-dynamic-button.active .toggle-switch-dynamic-button {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container-dynamic-button" id="toggleContainer">
+        <span>mostrar</span>
+        <div class="toggle-switch-dynamic-button"></div>
+    </div>
+
+    <script>
+        document.getElementById('toggleContainer').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #008080;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(66px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round">mostrar</span>
+  </label>
+
+  <script>
+    document.querySelector('.switch input').addEventListener('change', function() {
+      const slider = document.querySelector('.slider');
+      slider.textContent = this.checked ? 'mostrar' : 'esconder';
+    });
+  </script>
+</body>
+</html>

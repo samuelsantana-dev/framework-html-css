@@ -1,0 +1,28 @@
+ /*Botões */
+  /*Classes Compartilhadas chamei essa classe no css*/
+  .button-base {
+    border-radius: 25px;
+    padding: 8px;
+    font-weight: bold; 
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  /* Estilo específico para custom-button */
+.custom-button {
+  background-color: #00A0E3;
+  border: 2px solid #00A0E3;
+  color: white;
+}
+
+/* Estilo específico para rounded-button */
+.rounded-button {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff; 
+}
+
+.custom-button, .rounded-button {
+  @extend .button-base;
+}
+  
