@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Interface</title>
+    <style>
+       .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: linear-gradient(to bottom, #209CEE, #1A75BB); /* Degradê de azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #1A75BB, #209CEE);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">Carregar Cov/Excel/Texto</button>
+        <button class="btn">Selecionar IV</button>
+      </div>
+      
+</body>
+</html>

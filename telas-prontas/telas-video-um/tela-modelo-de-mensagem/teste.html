@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .model-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status.active {
+  background-color: #28a745; /* Verde para ativo */
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="model-card">
+        <h2>teste</h2>
+        <span class="tag">Samples</span>
+        <button class="send-button">Enviar mensagem <i class="fa-solid fa-paper-plane"></i></button>
+        <p>Status: <span class="status active">Ativo</span></p>
+        <p>Data: 29/07/2024 10:07:18</p>
+        <div class="actions">
+          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i> </div>
+      </div>
+</body>
+</html>

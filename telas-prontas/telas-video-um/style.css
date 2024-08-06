@@ -1,0 +1,227 @@
+:root{
+    --background-page: #EDEEEF;
+    --background-white: rgb(255, 255, 255);
+    --text-color: #fafafa;
+    --background-color-button: #2C808A;
+}
+
+body {
+    background-color: #EDEFEF;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-menu {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #7C7C7F;
+    border-radius: 5px;
+    padding: 0.938rem;
+    margin: 0.625rem;
+    width: 9.375rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-menu i {
+    font-size: 1.5rem;
+    margin-bottom: 0.313rem;
+}
+
+/*tela-borrar*/
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-list {
+    padding: 16px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.form-list label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/*gerador-de-link*/
+
+.form-search {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.input-group-select {
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.input-group-input {
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.label { 
+    float: left; 
+    width: 100%; 
+    margin-bottom: 25px; 
+    position: relative;
+}
+
+.input-bordas{
+    font: 12px/17px "Lato", Arial, sans-serif; 
+    color: #333; 
+    width: 100%; 
+    box-sizing: border-box; 
+    letter-spacing: 1px;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    padding: 8px; 
+    transition: 0.4s;
+}
+
+.divInputButton{
+    display: flex;
+    flex-direction: column;
+  }
+
+ /*Botões*/
+  /*Classes Compartilhadas chamei essa classe no css*/
+  .button-base {
+    border-radius: 25px;
+    padding: 8px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  /*Estilo específico para custom-button*/
+.custom-button {
+  background-color: var( --background-color-button);
+  color: var(--text-color);
+}
+
+/*Estilo específico para rounded-button*/
+.rounded-button {
+  background-color: var(--background-white);
+  border: 1px solid var(--text-color);
+}
+
+.custom-button, .rounded-button {
+  @extend .button-base;
+}
+
+/*botões-de-pr*/
+.container-botoes-de-pr {
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.button-list-botoes-de-pr {
+    padding: 16px;
+}
+
+.button-item-botoes-de-pr {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.button-item-botoes-de-pr  {
+    font-size: 14px;
+}
+/*Botões Dinamicos*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #008080;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(66px);
+  }
+
+  .slider.round {
+    border-radius: 14px;
+  }
